@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Projects</title>
+		<script type="text/javascript">
+			  function pickHorse(){
+		       //collects user imput for game
+		       let usersHorse = prompt("What NUMBER Horse", "Enter a number from 1 - 6");
+		       //records the number the user imputed
+		       document.getElementById('choice').innerText = usersHorse;		
+		}
+			function startRace(){
+				//generates a random whole number between 1 and 6
+				let randomNumber = Math.floor(Math.random() * 6) + 1;
+				//sends alerts about the race
+				alert("The Race is in progress... Press OK");
+				alert("WOW! Princess has overtaken Horsey, but its not over yet... Press OK")
+		        alert("The Race has ended press OK to view results");	
+		        //records the generated number
+				document.getElementById('display').innerText = randomNumber;
+			}
+		</script>
+		
+	</head>
+	<body>
+		<h1>Projects</h1>
+		<a href="index.html">HOME</a> | <a href="index2.html">PROJECTS</a> | <a href="index3.html">CONTACT</a>
+		<p><h2>Varrock Center Website (closed)</h2>
+		<a href="https://runescapeclans.fandom.com/wiki/Clan:LumbridgeCity/Varrock_Center">Detailed Wiki</a></p>
+		<h2>Digital Derby</h2>
+		<h3>Instructions</h3>
+		<p>To play press the "PICK HORSE" button to select a horse:
+			<ol>
+				<li>Horsey</li>
+				<li>Roudolph</li>
+				<li>Henry</li>
+				<li>Princess</li>
+				<li>Marvin</li>
+				<li>Grumpy</li>
+			</ol>
+			Next press the "RACE" button to get the results.
+		</p>
+		<button onclick="pickHorse();">PICK HORSE</button>
+		<button onclick="startRace();">RACE!</button>
+		<p>Your Horse:<div id="choice" style="font-size: 50px"></div></p>
+		<p>Winning Horse:<div id="display" style="font-size: 100px;" ></div></p>
+		<p><h5>Bellow is the code that makes this game work.</h5></p>
+		<p><a href="https://github.com/mjkiyoi/Digital-Derby">GitHub</a></p>
+		<p><div style="width:400px;height:370px;line-height:3em;overflow:scroll;">
+			<pre>
+				<code>
+function pickHorse(){
+//collects user imput for game
+let usersHorse = prompt("What NUMBER Horse", "Enter a number from 1 - 6");
+//records the number the user imputed
+document.getElementById('choice').innerText = usersHorse;		
+ }
+function startRace(){
+//generates a random whole number between 1 and 6
+let randomNumber = Math.floor(Math.random() * 6) + 1;
+//sends alerts about the race
+alert("The Race is in progress... Press OK");
+alert("WOW! Princess has overtaken Horsey, but its not over yet... Press OK")
+alert("The Race has ended press OK to view results");	
+//records the generated number
+document.getElementById('display').innerText = randomNumber;
+ }
+				</code></pre>				
+			</body>
+		</html>
